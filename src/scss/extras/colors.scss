@@ -1,0 +1,48 @@
+$ColorsCodes: (
+    'RedColor': #f44336, 'RedColorHover': #d32f2f,
+    'PinkColor': #e91e63, 'PinkColorHover': #c2185b,
+    'PurpleColor': #9c27b0, 'PurpleColorHover': #7b1fa2,
+    'DeepPurpleColor': #673ab7, 'DeepPurpleColorHover': #512da8,
+    'IndigoColor': #3f51b5, 'IndigoColorHover': #303f9f,
+    'BlueColor': #2196f3, 'BlueColorHover': #1976d2,
+    'LightBlueColor': #03a9f4, 'LightBlueColorHover': #0288d1,
+    'CyanColor': #00bcd4, 'CyanColorHover': #0097a7,
+    'TealColor': #009688, 'TealColorHover': #00796b,
+    'GreenColor': #4caf50, 'GreenColorHover': #388e3c,
+    'LightGreenColor': #8bc34a, 'LightGreenColorHover': #689f38,
+    'LimeColor': #cddc39, 'LimeColorHover': #afb42b,
+    'YellowColor': #ffeb3b, 'YellowColorHover': #fbc02d,
+    'AmberColor': #ffc107, 'AmberColorHover': #ffa000,
+    'OrangeColor': #ff9800, 'OrangeColorHover': #f57c00,
+    'DeepOrangeColor': #ff5722, 'DeepOrangeColorHover': #e64a19,
+    'BrownColor': #795548, 'BrownColorHover': #5d4037,
+    'GreyColor': #9e9e9e, 'GreyColorHover': #616161,
+    'WhiteColor': white, 'WhiteColorHover': darken(white, 10),
+    'BlackColor': black, 'BlackColorHover': lighten(black, 10),
+    'LightColor': #ecf0f1, 'LightColorHover': darken(#ecf0f1, 10)
+);
+
+$Colors: 'Red', 'Pink', 'Purple', 'DeepPurple', 'Indigo', 'Blue', 'LightBlue', 'Cyan', 'Teal', 'Green', 'LightGreen', 'Lime',
+        'Yellow', 'Amber', 'Orange', 'DeepOrange', 'Brown', 'Grey', 'White', 'Black', 'Light';
+
+@each $Color in $Colors {
+    &[text-color="#{$Color}"] {
+        color: map-get($ColorsCodes, "#{$Color}Color") !important;
+        &[text-color-hover]:hover { color: map-get($ColorsCodes, "#{$Color}ColorHover") !important; }
+    }
+
+    &[background-color="#{$Color}"] {
+        background-color: map-get($ColorsCodes, "#{$Color}Color") !important;
+        &[background-color-hover]:hover { background-color: map-get($ColorsCodes, "#{$Color}ColorHover") !important; }
+    }
+
+    &[border-color="#{$Color}"] {
+        border-color: map-get($ColorsCodes, "#{$Color}Color") !important;
+        &[border-color-hover]:hover { border-color: map-get($ColorsCodes, "#{$Color}ColorHover") !important; }
+    }
+}
+
+@function GetColor ($Color, $Hover: 0) {
+    @if $Hover == 0 { @return map-get($ColorsCodes, "#{$Color}Color"); }
+    @else { @return map-get($ColorsCodes, "#{$Color}ColorHover"); }
+}

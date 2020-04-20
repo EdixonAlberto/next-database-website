@@ -1,0 +1,21 @@
+@import './extras/fonts.scss';
+@import './extras/colors.scss';
+@import './extras/animations.scss';
+
+* {
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    font-family: $MontserratLight;
+}
+
+body {
+    top: 0;
+    left: 0;
+}
+
+// Pages
+@import './pages/error404.scss';
+@import './pages/home.scss';

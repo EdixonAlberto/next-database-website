@@ -1,0 +1,10 @@
+{
+    "watch": [ "src" ],
+    "ext": "ts",
+    "ignore": [
+        "public/**/*",
+        "node_modules",
+        "app/**/*"
+    ],
+    "exec": "npm run dev:server"
+}

@@ -1,0 +1,37 @@
+.danielsolarte-error-page {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    background-color: GetColor('Red');
+    color: white;
+    letter-spacing: .02em;
+
+    & .title {
+        font: {
+            family: $MontserratSemiBold;
+            size: 5em;
+        }
+    }
+    & .type {
+        margin: .1rem 0;
+        font: {
+            family: $MontserratBold;
+            size: 14em;
+        }
+    }
+    & .subtitle {
+        font: {
+            size: 3em;
+        }
+    }
+    & .message {
+        margin-top: 2rem;
+
+        & a {
+            color: white;
+        }
+    }
+}

@@ -26,7 +26,7 @@ const docsHeader = {
         { link: "/docs/queries", title: "Overview" },
         { link: "/docs/insert", title: "Insert" },
         { link: "/docs/delete", title: "Delete" },
-        { link: "/docs/select", title: "select" },
+        { link: "/docs/select", title: "Select" },
         { link: "/docs/update", title: "Update" },
         { link: "/docs/limit", title: "Limit" }
     ],
@@ -38,7 +38,7 @@ const docsHeader = {
         { link: "/docs/truncate", title: "Truncate" }
     ],
     Expert: [
-        { link: "/docs/expert", title: "Overview" },
+        { link: "/docs/joins", title: "Overview" },
         { link: "/docs/join", title: "Join" },
         { link: "/docs/inner-join", title: "Inner Join" },
         { link: "/docs/left-join", title: "Left Join" },

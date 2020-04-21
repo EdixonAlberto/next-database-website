@@ -17,7 +17,7 @@ export default () => {
             "   ssl: false\r\n" +
             "});\r\n\r\n" +
             "try {\r\n" +
-            "   await database.connect();\r\n" +
+            "   database.connect();\r\n" +
             "   console.log('MySQL connected!');\r\n" +
             "}\r\n" +
             "catch (error) {\r\n" +

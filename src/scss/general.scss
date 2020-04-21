@@ -9,13 +9,34 @@
     outline: none;
     box-sizing: border-box;
     font-family: $MontserratLight;
+    letter-spacing: .02em;
 }
+
+$background: #F9F9F9;
+$backgroundDark: #333335;
+
+$textColor: rgba(black, .8);
+$textColorHover: black;
+$textColorDark: rgba(white, .8);
+$textColorDarkHover: white;
+
+$secondaryColor: rgba(GetColor('Indigo'), .8);
+$secondaryColorHover: GetColor('Indigo');
 
 body {
     top: 0;
     left: 0;
+    background-color: $background;
+    color: $textColor;
 }
+
+// Components
+@import './components/header.scss';
+@import './components/docsNavigator.scss';
+@import './components/code.scss';
+@import './components/headerMobile.scss';
 
 // Pages
 @import './pages/error404.scss';
 @import './pages/home.scss';
+@import './pages/docs.scss';

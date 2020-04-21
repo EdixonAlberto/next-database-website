@@ -1,0 +1,147 @@
+.next-database-header {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 3.75rem;
+    letter-spacing: .02em;
+    background-color: white;
+    box-shadow: 0 0 2px 0 rgba(black, .34);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+
+    @media (max-width: 991.98px) {
+        padding: .5rem 2rem;
+    }
+
+    @media (max-width: 575.98px) {
+        padding: .5rem 1rem;
+    }
+
+    & .header-title {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: flex-start;
+        font: {
+            family: $MontserratSemiBold;
+            size: 2em;
+        }
+
+        @media (max-width: 991.98px) {
+            width: calc(100% - 35px);
+        }
+
+        @media (max-width: 575.98px) {
+            font-size: 1.5em;
+        }
+
+        & > img {
+            width: 35px;
+            margin-right: .5rem;
+
+            @media (max-width: 575.98px) {
+                width: 20px;
+            }
+        }
+    }
+    & .header-toggle {
+        width: 35px;
+        height: 35px;
+        display: none;
+        cursor: pointer;
+        background-color: $textColorHover;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: center;
+        border-radius: 4px;
+
+        @media (max-width: 991.98px) {
+            display: flex;
+        }
+
+        & > img {
+            width: 20px;
+            filter: invert(99%) sepia(0%) saturate(7500%) hue-rotate(115deg) brightness(112%) contrast(93%);
+        }
+    }
+    & .header-nav {
+        list-style: none;
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: flex-end;
+        padding: 1rem 0;
+
+        @media (max-width: 991.98px) and (min-width: 576px) {
+            padding: 0;
+            display: none;
+            transition: .4s height ease-in-out;
+
+            &.active {
+                display: block;
+                width: 100%;
+                margin-top: .5rem;
+            }
+        }
+
+        @media (max-width: 575.98px) {
+            display: none;
+        }
+        
+        & li {
+            margin-left: 1rem;
+
+            @media (max-width: 991.98px) {
+                margin-left: 0;
+            }
+
+            &:nth-child(1) {
+                margin-left: 0;
+            }
+            &:last-child > a {
+                background-color: $secondaryColor;
+                color: $background;
+                transition: .4s background-color ease-in-out;
+
+                @media (max-width: 991.98px) {
+                    background-color: $backgroundDark;
+                    color: $textColorDark;
+                }
+
+                &:hover {
+                    background-color: $secondaryColorHover;
+                    color: $background;
+                }
+            }
+            &.active > a {
+                color: $secondaryColor;
+                font-family: $MontserratSemiBold;
+
+                &:hover {
+                    color: $secondaryColorHover;
+                }
+            }
+            & a {
+                display: block;
+                text-decoration: none;
+                color: $textColor;
+                padding: .5rem 1rem;
+                font: {
+                    size: 1.25em;
+                    family: $MontserratRegular;
+                }
+                border-radius: 4px;
+                cursor: pointer;
+                transition: .1s color ease-in-out;
+
+                &:hover {
+                    color: $textColorHover;
+                }
+            }
+        }
+    }
+}

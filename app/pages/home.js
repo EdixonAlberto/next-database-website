@@ -7,10 +7,11 @@
  * @format
  */
 
-import React, { useState } from 'react'
+import React from 'react'
+import Header from '../components/header'
 
-export default () => {
-    return (<div className="next-database-page">
-        Hola
+export default ({ docsHeader }) => {
+    return (<div className="next-database-home-page">
+        <Header docsHeader={docsHeader} />
     </div>)
 }

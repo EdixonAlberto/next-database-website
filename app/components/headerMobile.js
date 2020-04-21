@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-export default ({ active, docsHeader }) => {
+export default ({ active, docsHeader, setActive }) => {
 
     function getActive (page) {
         return document.location.pathname === page
@@ -15,14 +15,14 @@ export default ({ active, docsHeader }) => {
 
                     {docsHeader[title].length && <ul>
                         {docsHeader[title].map(subpage => <li className={getActive(subpage.link) ? 'active' : ''}
-                            key={`docs_${subpage.title.toLowerCase()}`}><Link to={subpage.link}>
+                            key={`docs_${subpage.title.toLowerCase()}`}><Link to={subpage.link} onClick={() => setActive(false)}>
                             {subpage.title}
                         </Link></li>)}
                     </ul>}
                 </li>)}
             </ul>
         </li>
-        <li><a href="https://www.npmjs.com/package/next-database">
+        <li><a href="https://www.npmjs.com/package/next-database" onClick={() => setActive(false)}>
             View on NPM
         </a></li>
     </ul>

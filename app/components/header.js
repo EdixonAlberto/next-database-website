@@ -18,7 +18,7 @@ export default ({ docsHeader }) => {
         <div className="header-toggle" onClick={() => setMenuActive(!menuActive)}>
             <img src="/assets/images/icons/menu.svg" alt="" />
         </div>
-        <HeaderMobile active={menuActive} docsHeader={docsHeader} />
+        <HeaderMobile active={menuActive} docsHeader={docsHeader} setActive={setMenuActive} />
         <ul className={`header-nav ${menuActive ? 'active' : ''}`}>
             <li className={getActive('/') ? 'active' : ''}><Link to="/">
                 Home

@@ -26,6 +26,6 @@ export default () => {
         } />
         
         <DocsLinks back={{ title: 'Using with MySQL', link: 'mysql-usage' }}
-            forward={{ title: 'Queries', link: 'queries' }} />
+            forward={{ title: 'Queries Overview', link: 'queries' }} />
     </>
 }

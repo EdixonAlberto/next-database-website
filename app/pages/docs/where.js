@@ -1,5 +1,4 @@
 import React from 'react'
-import Code from '../../components/code'
 
 export default () => {
 

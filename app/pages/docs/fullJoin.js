@@ -4,8 +4,7 @@ import Code from '../../components/code'
 export default () => {
 
     return <>
-        <h1>What is next-database?</h1>
-        <p></p>
+        <h1>Full Join</h1>
     </>
 
 }

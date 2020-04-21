@@ -3,8 +3,10 @@ const path = require('path');
 module.exports = {
     entry: './app/index.js',
     output: {
+        chunkFilename: '[name].chunk.js',
         path: path.join(__dirname, './public/assets/javascript'),
-        filename: 'main.min.js'
+        publicPath: '/assets/javascript/',
+        filename: '[name].bundle.js'
     },
     module: {
         rules: [

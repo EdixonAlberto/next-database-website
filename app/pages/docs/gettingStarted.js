@@ -23,7 +23,8 @@ export default () => {
 
         <h2>How to use</h2>
         <p>First, create a new file called <span>index.js</span> and put the next lines in it</p>
-        <Code lang="javascript" title="index.js" text={"const nextDatabase = require('next-database');\r\n\r\n" +
+        <Code lang="javascript" title="index.js" text={
+            "const nextDatabase = require('next-database');\r\n\r\n" +
             "// Making a connection to MySQL\r\n" +
             "const database = new nextDatabase({\r\n" +
             "    type: 'mysql',\r\n" +
@@ -32,7 +33,17 @@ export default () => {
             "    user: 'root',\r\n" +
             "    password: '',\r\n" +
             "    database: 'next-database'\r\n" +
-            "});"} />
+            "});\r\n\r\n" +
+            "try {\r\n" +
+            "   database.connect();\r\n" +
+            "   console.log('Database connected!');\r\n\r\n"+
+            "   // Making an example select query\r\n" +
+            "   const select = database.select('users').execute();\r\n" +
+            "   console.log(select);\r\n" +
+            "} catch (error) {\r\n" +
+            "   console.log(error);\r\n" +
+            "}"
+        } />
 
         <DocsLinks back={{ title: 'What is next-database?', link: 'what-is' }}
             forward={{ title: 'Using with MySQL', link: 'mysql-usage' }} />

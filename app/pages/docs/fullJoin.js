@@ -16,8 +16,15 @@ export default () => {
 
     return <>
         <h1>Full Join</h1>
+        <p>With this method you can get the rows when there is a match in one of the tables</p>
+        <Code lang="javascript" text="selectQuery.fullJoin(table: string) : nextDatabase.Join" />
 
-        <DocsExtra asJoin={true} onJoin={true} usingJoin={true} />
+        <h2 id="example">Example</h2>
+        <Code lang="javascript" text="database.select('users').fullJoin('groups');" />
+        <p>It is equivalent to</p>
+        <Code lang="sql" text="SELECT * FROM 'users' FULL JOIN 'groups';" />
+
+        <DocsExtra asJoin={true} onJoin={true} usingJoin={true} execute={true} />
 
         <DocsLinks back={{ title: "Join Query", link: "join" }}
             forward={{ title: "Left Join Query", link: "left-join" }} />

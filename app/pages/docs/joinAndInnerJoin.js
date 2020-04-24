@@ -21,12 +21,12 @@ export default () => {
         <Code lang="javascript" text="selectQuery.innerJoin(table: string) : nextDatabase.Join" />
         <p><b>NOTE</b> Both methods do the same</p>
 
-        <h2>Example with Join</h2>
+        <h2 id="join-example">Example with Join</h2>
         <Code lang="javascript" text="database.select('users').join('groups');" />
         <p>It is equivalent to</p>
         <Code lang="sql" text="SELECT * FROM 'users' JOIN 'groups';" />
 
-        <h2>Example with Inner Join</h2>
+        <h2 id="inner-join-example">Example with Inner Join</h2>
         <Code lang="javascript" text="database.select('users').innerJoin('groups');" />
         <p>It is equivalent to</p>
         <Code lang="sql" text="SELECT * FROM 'users' INNER JOIN 'groups';" />

@@ -11,11 +11,11 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import Loader from './pages/loader'
-import Error404 from './pages/error404'
 import docsHeader from './routes'
 
 const Home = React.lazy(() => import('./pages/home')),
-    Docs = React.lazy(() => import('./pages/docs'))
+    Docs = React.lazy(() => import('./pages/docs')),
+    Error404 = React.lazy(() => import('./pages/error404'))
 
 ReactDOM.render(<React.Suspense fallback={<Loader />}>
     <BrowserRouter>

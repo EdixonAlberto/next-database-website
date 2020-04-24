@@ -1,3 +1,12 @@
+/**
+ * Copyright (c) Daniel Solarte Chaverra
+ * 
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ * 
+ * @format
+ */
+
 import React from 'react'
 import Code from '../../components/code'
 import { Link } from 'react-router-dom'
@@ -8,11 +17,12 @@ export default () => {
 
     return <>
         <h1>Select</h1>
-        <p>With this method you can select all data or specific data of a table in your database.</p>
+        <p>With this method you can select all data or specific data of a table in your database</p>
         <Code lang="javascript" text="database.select(table: string) : nextDatabase.Select" />
+        <p><b>IMPORTANT</b> To run the query you must use<Link to="/docs/queries/execute">Execute</Link> method</p>
 
         <h2 id="distinct">Distinct select</h2>
-        <p>The distinct select is used to return only distinct (different) values.</p>
+        <p>The distinct select is used to return only distinct (different) values</p>
         <Code lang="javascript" text="database.select(table: string).distinct(column: string) : nextDatabase.Select" />
         <Code lang="javascript" text="database.select(table: string).distinct(columns: string[]) : nextDatabase.Select" />
 
@@ -49,9 +59,9 @@ export default () => {
         <Code lang="sql" text="SELECT * FROM 'users' ORDER BY 'id' DESC;" />
 
         <h2 id="join">Using joins</h2>
-        <p>Read the<Link to="/docs/joins">Join</Link> docs for more information.</p>
+        <p>Read the<Link to="/docs/joins">Expert Overview</Link> docs for more information</p>
 
-        <DocsExtra />
+        <DocsExtra limit={true} where={true} execute={true} />
 
         <DocsLinks back={{ title: "Delete Query", link: "delete" }} forward={{ title: "Update Query", link: "update" }} />
     </>

@@ -9,15 +9,11 @@
 
 import React from 'react'
 import Code from '../../components/code'
-import DocsLinks from '../../components/docsLinks'
 
 export default () => {
 
     return <>
-        <h1>Add Columns</h1>
-
-        <DocsLinks back={{ title: "Limit", link: "limit" }}
-            forward={{ title: "Create Table", link: "create-table" }} />
+        <h1>Create Table</h1>
     </>
 
 }

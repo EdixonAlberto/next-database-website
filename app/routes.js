@@ -12,8 +12,8 @@ const home = React.lazy(() => import('./pages/home')),
     update = React.lazy(() => import('./pages/docs/update')),
     limit = React.lazy(() => import('./pages/docs/limit')),
     addColumns = React.lazy(() => import('./pages/docs/addColumns')),
-    create = React.lazy(() => import('./pages/docs/create')),
-    drop = React.lazy(() => import('./pages/docs/drop')),
+    createTable = React.lazy(() => import('./pages/docs/createTable')),
+    dropTable = React.lazy(() => import('./pages/docs/dropTable')),
     dropColumns = React.lazy(() => import('./pages/docs/dropColumns')),
     truncate = React.lazy(() => import('./pages/docs/truncate')),
     joins = React.lazy(() => import('./pages/docs/joins')),
@@ -92,14 +92,14 @@ export default {
             component: addColumns
         },
         {
-            link: "/docs/create",
+            link: "/docs/create-table",
             title: "Create Table",
-            component: create
+            component: createTable
         },
         {
-            link: "/docs/drop",
-            title: "Drop",
-            component: drop
+            link: "/docs/drop-table",
+            title: "Drop Table",
+            component: dropTable
         },
         {
             link: "/docs/drop-columns",

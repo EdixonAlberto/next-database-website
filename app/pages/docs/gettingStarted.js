@@ -1,3 +1,12 @@
+/**
+ * Copyright (c) Daniel Solarte Chaverra
+ * 
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ * 
+ * @format
+ */
+
 import React from 'react'
 import Code from '../../components/code'
 import DocsLinks from '../../components/docsLinks'
@@ -13,9 +22,7 @@ export default () => {
         <Code lang="sh" text="$ npm i next-database" />
 
         <h2>How to use</h2>
-        <p>
-            First, create a new file called <span>index.js</span> and put the next lines in it.
-        </p>
+        <p>First, create a new file called <span>index.js</span> and put the next lines in it</p>
         <Code lang="javascript" title="index.js" text={"const nextDatabase = require('next-database');\r\n\r\n" +
             "// Making a connection to MySQL\r\n" +
             "const database = new nextDatabase({\r\n" +

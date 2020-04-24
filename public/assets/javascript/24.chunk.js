@@ -1,15 +1,1 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[24],{
-
-/***/ "./app/pages/docs/where.js":
-/*!*********************************!*\
-  !*** ./app/pages/docs/where.js ***!
-  \*********************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (function () {\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"h1\", null, \"Where\"));\n});\n\n//# sourceURL=webpack:///./app/pages/docs/where.js?");
-
-/***/ })
-
-}]);
+(window.webpackJsonp=window.webpackJsonp||[]).push([[24],{221:function(e,a,n){"use strict";n.r(a);var t=n(0),l=n.n(t);n(27);a.default=function(){return l.a.createElement(l.a.Fragment,null,l.a.createElement("h1",null,"What is next-database?"),l.a.createElement("p",null))}},27:function(e,a,n){"use strict";var t=n(0),l=n.n(t),c=n(30),r=n.n(c);a.a=function(e){return l.a.createElement("div",{className:"next-database-code ".concat(e.noMargin?"no-margin":"")},e.title&&l.a.createElement("div",{className:"code-header"},l.a.createElement("span",null,e.title),e.lang&&l.a.createElement("div",{className:"header-language"},e.lang)),l.a.createElement(r.a,{language:"language-".concat(e.lang)},e.text))}}}]);

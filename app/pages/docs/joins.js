@@ -16,9 +16,7 @@ export default () => {
 
     return <>
         <h1>Expert Overview</h1>
-        <p>
-            The Joins are used to combine rows from two or more tables, based on a related column between them
-        </p>
+        <p>The Joins are used to combine rows from two or more tables, based on a related column between them</p>
 
         <h2 id="as">As</h2>
         <p>With this method you can set a custom alias to the database to join</p>
@@ -39,7 +37,15 @@ export default () => {
         <Code lang="sql" text="SELECT * FROM 'users' INNER JOIN 'groups' ON groups.owner_id = users.id;" />
 
         <h2 id="using">Using</h2>
-        <p></p>
+        <p>With this method you can return the data of two differentes tables comparing a same column name</p>
+        <Code lang="javascript" text="joinQuery.using(columns: string[]) : nextDatabase.Join" />
+
+        <h3>Example</h3>
+        <Code lang="javascript" text="database.select('users').innerJoin('groups').using([ 'username' ]);" />
+        <p>It is equivalent to</p>
+        <Code lang="sql" text="SELECT * FROM 'users' INNER JOIN 'groups' USING 'username';" />
+        <p>Or</p>
+        <Code lang="sql" text="SELECT * FROM 'users' INNER JOIN 'groups' ON groups.username = users.username;" />
 
         <DocsLinks back={{ title: "Truncate Query", link: "truncate" }}
             forward={{ title: "Join Query", link: "join" }} />

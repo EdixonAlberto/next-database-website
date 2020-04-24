@@ -20,7 +20,7 @@ export default () => {
         <DocsExtra asJoin={true} onJoin={true} usingJoin={true} />
 
         <DocsLinks back={{ title: "Join Query", link: "join" }}
-            forward={{ title: "Inner Join Query", link: "inner-join" }} />
+            forward={{ title: "Left Join Query", link: "left-join" }} />
     </>
 
 }

@@ -17,9 +17,8 @@ const home = React.lazy(() => import('./pages/home')),
     dropColumns = React.lazy(() => import('./pages/docs/dropColumns')),
     truncate = React.lazy(() => import('./pages/docs/truncate')),
     joins = React.lazy(() => import('./pages/docs/joins')),
-    join = React.lazy(() => import('./pages/docs/join')),
+    joinAndInnerJoin = React.lazy(() => import('./pages/docs/joinAndInnerJoin')),
     fullJoin = React.lazy(() => import('./pages/docs/fullJoin')),
-    innerJoin = React.lazy(() => import('./pages/docs/innerJoin')),
     leftJoin = React.lazy(() => import('./pages/docs/leftJoin')),
     rightJoin = React.lazy(() => import('./pages/docs/rightJoin')),
     where = React.lazy(() => import('./pages/docs/where'))
@@ -119,19 +118,14 @@ export default {
             component: joins
         },
         {
-            link: "/docs/join",
-            title: "Join",
-            component: join
+            link: "/docs/join-and-inner-join",
+            title: "Join/Inner Join",
+            component: joinAndInnerJoin
         },
         {
             link: "/docs/full-join",
             title: "Full Join",
             component: fullJoin
-        },
-        {
-            link: "/docs/inner-join",
-            title: "Inner Join",
-            component: innerJoin
         },
         {
             link: "/docs/left-join",

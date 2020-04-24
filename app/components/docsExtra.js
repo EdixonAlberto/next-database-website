@@ -5,17 +5,17 @@ export default ({ asJoin, onJoin, usingJoin, limit, where, execute }) => {
     return <>
         {asJoin && <>
             <h2 id="as">As</h2>
-            <p>Readt the<Link to="/docs/joins/as">Expert Overview</Link> for more information</p>
+            <p>Read the<Link to="/docs/joins/as">Expert Overview</Link> for more information</p>
         </>}
 
         {onJoin && <>
             <h2 id="on">On</h2>
-            <p>Readt the<Link to="/docs/joins/on">Expert Overview</Link> for more information</p>
+            <p>Read the<Link to="/docs/joins/on">Expert Overview</Link> for more information</p>
         </>}
 
         {usingJoin && <>
-            <h2 id="using">As</h2>
-            <p>Readt the<Link to="/docs/joins/using">Expert Overview</Link> for more information</p>
+            <h2 id="using">Using</h2>
+            <p>Read the<Link to="/docs/joins/using">Expert Overview</Link> for more information</p>
         </>}
 
         {limit && <>

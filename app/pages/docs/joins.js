@@ -9,6 +9,7 @@
 
 import React from 'react'
 import Code from '../../components/code'
+import DocsExtra from '../../components/docsExtra'
 import DocsLinks from '../../components/docsLinks'
 import { Link } from 'react-router-dom'
 
@@ -47,8 +48,10 @@ export default () => {
         <p>Or</p>
         <Code lang="sql" text="SELECT * FROM 'users' INNER JOIN 'groups' ON groups.username = users.username;" />
 
+        <DocsExtra execute={true} />
+
         <DocsLinks back={{ title: "Truncate Query", link: "truncate" }}
-            forward={{ title: "Join Query", link: "join" }} />
+            forward={{ title: "Join/Inner Join Query", link: "join-and-inner-join" }} />
     </>
 
 }

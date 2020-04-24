@@ -16,11 +16,15 @@ export default () => {
 
     return <>
         <h1>Right Join</h1>
-        <p>
-            With this method you 
-        </p>
+        <p>With this method you can get all rows from the right table, even if there are no matches in the left table</p>
+        <Code lang="javascript" text="selectQuery.rightJoin(table: string) : nextDatabase.Join" />
 
-        <DocsExtra asJoin={true} onJoin={true} usingJoin={true} />
+        <h2 id="example">Example</h2>
+        <Code lang="javascript" text="database.select('users').rightJoin('groups');" />
+        <p>It is equivalent to</p>
+        <Code lang="sql" text="SELECT * FROM 'users' RIGHT JOIN 'groups';" />
+
+        <DocsExtra asJoin={true} onJoin={true} usingJoin={true} execute={true} />
 
         <DocsLinks back={{ title: "Left Join Query", link: "left-join" }}
             forward={{ title: "Where Query", link: "where" }} />
